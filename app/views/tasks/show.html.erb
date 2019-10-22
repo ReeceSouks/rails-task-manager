@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="header">
+    <h1><%= @task.title %></h1>
+    <div class="alert">
+      <span><%= link_to "Edit this task", edit_task_path %></span>
+    </div>
+  </div>
+
+  <dic class="task-description">
+    <p class="alert-two" role="alert"><%= @task.details%></p>
+    <% if @task.completed? %>
+    <div>
+      <span>This task is complete</span>
+      </div>
+      <% else %>
+      <div>
+        <span>This task has not been completed</span>
+      </div>
+      <% end %>
+    </div>
+
+    <span><%= link_to "Back to list", tasks_path %></span>
